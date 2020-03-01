@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="danger">{{error}}</div>
+<form class="form-group" action="{% url 'core:create' %}" method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    Image : <br>
+    <input type="file" name="image"><br><br>
+    status :<br>
+    <input type="text" name="status"><br><br>
+    kitchen_img : <br>
+    <input type="file" name="kit_img"><br><br>
+    kitchen :<br>
+    <input type="text" name="kitchen"><br><br>
+    squrefoot : <br>
+    <input type="text" name="squrefoot"><br><br>
+    city :<br>
+    <input type="text" name="city"><br><br>
+    town_address :<br>
+    <input type="text" name="address"><br><br>
+    bedroom_img : <br>
+    <input type="file" name="bed_img"><br><br>
+    bedroom: <br>
+    <input type="text" name="bed" id="" ><br><br>
+    let_bath :<br>
+    <input type="text" name="let_bath"><br><br>
+    swimming_pool :<br>
+    <input type="file" name="swimming"><br><br>
+    Price :<br>
+    <input type="text" name="price" id=""><br><br>
+    
+    <input type="submit" class="btn btn-primary" value="submit" name="submit" id=""> <br><br>   
+
+
+
+
+</form>
+</div>
+
+{% endblock %} 
